@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:id="@+id/sensor_tbl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- first row of the table layout-->
+        <TableRow
+
+            android:id="@+id/accel_row"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+            <!-- first element of the row-->
+            <TextView
+                android:id="@+id/accel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:text="Accelerometer"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/accel_ax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="left"
+                android:text="ax: "
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/accel_ay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="left"
+                android:text="ay: "
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/accel_az"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="left"
+                android:text="az: "
+                android:textSize="12dp" />
+        </TableRow>
+
+        <TableRow
+
+            android:id="@+id/mag_row"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <!-- first element of the row-->
+            <TextView
+                android:id="@+id/mag_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:text="Magnetometer"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/mag_hx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="left"
+                android:text="Hx: "
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/mag_hy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="left"
+                android:text="Hy: "
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/mag_hz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="left"
+                android:text="Hz: "
+                android:textSize="12dp" />
+        </TableRow>
+
+        <TableRow
+
+            android:id="@+id/gyro_row"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <!-- first element of the row-->
+            <TextView
+                android:id="@+id/gyro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:text="Gyroscope"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/gyro_pitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="left"
+                android:text="Pitch: "
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/gyro_roll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="left"
+                android:text="Roll: "
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/gyro_yaw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="left"
+                android:text="Yaw: "
+                android:textSize="12dp" />
+        </TableRow>
+    </TableLayout>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="sensor_tbl" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

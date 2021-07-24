@@ -1,0 +1,2 @@
+rootProject.name = "sensor_data_logger"
+include ':app'
