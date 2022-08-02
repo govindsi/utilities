@@ -2,7 +2,7 @@
 
 help()
 {
- echo "sudo spectral_scan.sh -i wlan0 -d ath10k -m mode"
+ echo "sudo spectral_scan.sh -i wlan0 -d ath9k -m mode"
 }
 
 while getopts ":i:d:m:h" option; do
